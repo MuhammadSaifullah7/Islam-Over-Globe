@@ -17,7 +17,7 @@ function convertSecondsToMinutes(seconds) {
 
 async function getsongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/${currFolder}/`);
+    let a = await fetch(`/${currFolder}/`);
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");
@@ -35,7 +35,7 @@ async function getsongs(folder) {
 
 let playMusic = (music) => {
     let encodedMusic = encodeURIComponent(music.trim());
-    let audioUrl = `http://127.0.0.1:3000/${currFolder}/` + encodedMusic + ".mp3";
+    let audioUrl = `/${currFolder}/` + encodedMusic + ".mp3";
     console.log("Playing music from URL: " + audioUrl);
     currentsong.src = audioUrl;
     currentsong.play();
@@ -108,7 +108,7 @@ async function loadSongs(folder) {
 }
 
 async function displayAlbums() {
-    let response = await fetch('http://127.0.0.1:3000/songs/');
+    let response = await fetch('/songs/');
     let text = await response.text();
     let div = document.createElement("div");
     div.innerHTML = text;
@@ -122,7 +122,7 @@ async function displayAlbums() {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/").slice(-2)[0];
             // Get the meta data of the folder
-            let folderResponse = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+            let folderResponse = await fetch(`/songs/${folder}/info.json`);
             let folderData = await folderResponse.json();
             console.log(folderData);
             let description = folderData.description;
