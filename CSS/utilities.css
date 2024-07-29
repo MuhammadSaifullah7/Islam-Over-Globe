@@ -1,0 +1,80 @@
+.border{
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.invert{
+    filter: invert(100%);
+}
+
+.bg-grey{
+    background-color: #121212;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 22px;
+}
+
+.font-bold{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-thin{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playnowicon{
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+}
+
+.gradient {
+    background: linear-gradient(to right, #05faec, #01a2ff);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to right,#05faec, #01a2ff);
+    background: -moz-linear-gradient(to right,#05faec, #01a2ff);
+    background: -o-linear-gradient(to right,#05faec, #01a2ff);
+}
+
+.firstcont{
+    height: 65vh;
+}
+
+.gradientblack{
+    background: linear-gradient(to right, #202121, #01a2ff);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to right,#05faec, #01a2ff);
+    background: -moz-linear-gradient(to right,#05faec, #01a2ff);
+    background: -o-linear-gradient(to right,#05faec, #01a2ff);
+}
